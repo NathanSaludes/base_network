@@ -6,6 +6,7 @@
   :root {
     --background: #e4eceb;
     --foreground: #616b6a;
+    --foreground-inverted: #80b2ab;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -14,8 +15,8 @@
     --popover-foreground: 222.2 84% 4.9%;
 
     --primary: #17443f;
+    --primary-faded: #17443f;
     --primary-foreground: #ecf9f7;
-    --primary-foreground-dark: #406763;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;

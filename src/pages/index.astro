@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import { RoundedButton, LinkButton } from '@/components/Buttons'
+import { Feature } from '@/components/FeatureCard'
 ---
 
 <html lang="en">
@@ -20,23 +22,85 @@ import '../styles/global.css';
   <body class="antialiased font-sans manrope-500 leading-relaxed">
     <header></header>
     <main>
-      <section>
-        <div class="container grid grid-cols-2 gap-16">
-          <div class="left flex flex-col gap-8">
+      <!-- hero section -->
+      <section class="py-20">
+        <div class="container flex gap-16">
+          <div class="left flex flex-col gap-8 justify-center shrink-0 w-1/2">
             <h1 class="manrope-800 text-5xl tracking-tighter text-primary leading-tight">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </h1>
 						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						<div class="flex">
-							<Button></Button>
+              <RoundedButton>Button Text</RoundedButton>
+              <LinkButton>Link Text</LinkButton>
 						</div>
           </div>
           <div class="right">
-						Hello
+						<picture>
+              <img src="img_placeholder_1.jpg" alt="placeholder_image" class="h-[525px] min-w-[980px] object-cover rounded-xl shadow-md">
+            </picture>
 					</div>
         </div>
       </section>
+
+      <!-- features section -->
+      <section class="py-20 bg-primary text-foreground-inverted">
+        <div class="container">
+          <div class="flex flex-col items-center gap-2 text-center mb-12">
+            <h2 class="manrope-700 text-5xl tracking-tighter text-primary-foreground leading-tight">
+              Lorem ipsum dolor sit amet, conse
+            </h2>
+            <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <!-- wrapper -->
+          <div class="grid grid-cols-3 gap-10">
+            <Feature />           
+            <Feature />           
+            <Feature />           
+            <Feature />           
+            <Feature />           
+            <Feature />           
+          </div>
+        </div>
+      </section>
+
+      <!-- use cases -->
+      <section class="py-20">
+        <div class="container">
+          <div class="flex flex-col items-center gap-2 text-center">
+            <h2 class="manrope-800 text-5xl tracking-tighter text-primary-faded leading-tight">
+              Lorem ipsum dolor sit amet, cons...
+            </h2>
+            <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- call to action -->
+      <section class="py-20 bg-primary text-foreground-inverted">
+        <div class="container">
+          <div class="flex flex-col items-center gap-2 text-center">
+            <h2 class="manrope-700 text-5xl tracking-tighter text-primary-foreground leading-tight">
+              Lorem ipsum dolor si...
+            </h2>
+            <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="py-20">
+        <div class="container">
+          <div class="flex flex-col items-center gap-2 text-center">
+            <h2 class="manrope-800 text-5xl tracking-tighter text-primary-faded leading-tight">
+              Lorem ipsum dolor sit a...
+            </h2>
+            <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer></footer>
   </body>
 </html>
