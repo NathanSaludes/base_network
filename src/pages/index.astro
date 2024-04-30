@@ -1,7 +1,9 @@
 ---
+import { LinkButton, RoundedButton } from '@/components/Buttons';
+import Features from '@/components/Features';
+import SignUpField from '@/components/SignUpField'
 import '../styles/global.css';
-import { RoundedButton, LinkButton } from '@/components/Buttons'
-import { Feature } from '@/components/FeatureCard'
+import Container from '@/components/Container.astro';
 ---
 
 <html lang="en">
@@ -19,86 +21,183 @@ import { Feature } from '@/components/FeatureCard'
       rel="stylesheet"
     />
   </head>
-  <body class="antialiased font-sans manrope-500 leading-relaxed">
+  <body class="antialiased font-sans manrope-500 leading-[1.7]">
     <header></header>
     <main>
       <!-- hero section -->
-      <section class="py-20">
-        <div class="container flex gap-16">
+      <Container className="overflow-hidden">
+        <div class="flex gap-16">
           <div class="left flex flex-col gap-8 justify-center shrink-0 w-1/2">
             <h1 class="manrope-800 text-5xl tracking-tighter text-primary leading-tight">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </h1>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						<div class="flex">
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="flex">
               <RoundedButton>Button Text</RoundedButton>
               <LinkButton>Link Text</LinkButton>
-						</div>
+            </div>
           </div>
           <div class="right">
-						<picture>
+            <picture>
               <img src="img_placeholder_1.jpg" alt="placeholder_image" class="h-[525px] min-w-[980px] object-cover rounded-xl shadow-md">
             </picture>
-					</div>
+          </div>
         </div>
-      </section>
+      </Container>
 
       <!-- features section -->
-      <section class="py-20 bg-primary text-foreground-inverted">
-        <div class="container">
-          <div class="flex flex-col items-center gap-2 text-center mb-12">
-            <h2 class="manrope-700 text-5xl tracking-tighter text-primary-foreground leading-tight">
-              Lorem ipsum dolor sit amet, conse
-            </h2>
-            <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <!-- wrapper -->
-          <div class="grid grid-cols-3 gap-10">
-            <Feature />           
-            <Feature />           
-            <Feature />           
-            <Feature />           
-            <Feature />           
-            <Feature />           
-          </div>
+      <Container className="bg-primary text-foreground-inverted">
+        <div class="flex flex-col items-center gap-2 text-center mb-12">
+          <h2 class="manrope-700 text-5xl tracking-tighter text-primary-foreground leading-tight">
+            Lorem ipsum dolor sit amet, conse
+          </h2>
+          <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-      </section>
+        <!-- wrapper -->
+        <Features client:load />
+      </Container>
 
       <!-- use cases -->
-      <section class="py-20">
-        <div class="container">
-          <div class="flex flex-col items-center gap-2 text-center">
-            <h2 class="manrope-800 text-5xl tracking-tighter text-primary-faded leading-tight">
-              Lorem ipsum dolor sit amet, cons...
-            </h2>
-            <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
+      <Container className="overflow-hidden">
+        <div class="flex flex-col items-center gap-2 text-center mb-12">
+          <h2 class="manrope-800 text-5xl tracking-tighter text-primary-faded leading-tight">
+            Lorem ipsum dolor sit amet, cons...
+          </h2>
+          <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-      </section>
+        <div class="flex">
+          <!-- cards container -->
+          <div class="w-1/2 shrink-0 my-auto">
+            <div class="px-7 py-6 hover:bg-white/50 hover:cursor-pointer transition duration-200 rounded-l-lg flex flex-col gap-2">
+              <h3 class="text-xl font-bold text-primary-faded">Use case t enim ad minim veniam</h3>
+              <p class="line-clamp-2 text-ellipsis text-foreground">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="px-7 py-6 hover:bg-white/50 hover:cursor-pointer transition duration-200 rounded-l-lg flex flex-col gap-2">
+              <h3 class="text-xl font-bold text-primary-faded">Use case t enim ad minim veniam</h3>
+              <p class="line-clamp-2 text-ellipsis text-foreground">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="px-7 py-6 hover:bg-white/50 hover:cursor-pointer transition duration-200 rounded-l-lg flex flex-col gap-2">
+              <h3 class="text-xl font-bold text-primary-faded">Use case t enim ad minim veniam</h3>
+              <p class="line-clamp-2 text-ellipsis text-foreground">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="px-7 py-6 hover:bg-white/50 hover:cursor-pointer transition duration-200 rounded-l-lg flex flex-col gap-2">
+              <h3 class="text-xl font-bold text-primary-faded">Use case t enim ad minim veniam</h3>
+              <p class="line-clamp-2 text-ellipsis text-foreground">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+          <!-- image container -->
+          <img src="img_placeholder_1.jpg" alt="placeholder_image" class="h-[590px] min-w-[980px] object-cover rounded-xl shadow-md" />
+        </div>
+      </Container>
 
       <!-- call to action -->
-      <section class="py-20 bg-primary text-foreground-inverted">
-        <div class="container">
-          <div class="flex flex-col items-center gap-2 text-center">
-            <h2 class="manrope-700 text-5xl tracking-tighter text-primary-foreground leading-tight">
-              Lorem ipsum dolor si...
-            </h2>
-            <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
+      <Container className="bg-primary text-foreground-inverted">
+        <div class="flex flex-col items-center gap-2 text-center mb-12">
+          <h2 class="manrope-700 text-5xl tracking-tighter text-primary-foreground leading-tight">
+            Lorem ipsum dolor si...
+          </h2>
+          <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-      </section>
+        <div class="flex justify-center">
+          <SignUpField client:load />
+        </div>
+      </Container>
 
       <!-- Pricing -->
-      <section class="py-20">
-        <div class="container">
-          <div class="flex flex-col items-center gap-2 text-center">
-            <h2 class="manrope-800 text-5xl tracking-tighter text-primary-faded leading-tight">
-              Lorem ipsum dolor sit a...
-            </h2>
-            <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
+      <Container>
+        <div class="flex flex-col items-center gap-2 text-center mb-12">
+          <h2 class="manrope-800 text-5xl tracking-tighter text-primary-faded leading-tight">
+            Lorem ipsum dolor sit a...
+          </h2>
+          <p class="max-w-[677px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-      </section>
+        <div class="flex gap-5 flex-wrap">
+          <!-- package 1 -->
+          <div class="space-y-3 flex-1 w-1/3 p-7 rounded-2xl text-sm leading-6">
+            <p class="text-4xl font-semibold">$123</p>
+            <h3 class="text-lg font-semibold">Tier Label</h3>
+            <p class="line-clamp-2 text-ellipsis">Tier/Plan short description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="h-11 block w-full rounded-full font-semibold outline outline-1 outline-gray-400">Get started</button>
+            <ul class="space-y-3">
+              <li class="flex gap-2 items-start">
+                <img src="/img_check.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+            </ul>
+          </div>
+          <!-- package 2 -->
+          <div class="bg-primary space-y-3 flex-1 w-1/3 p-7 rounded-2xl text-sm leading-6">
+            <p class="text-4xl font-semibold text-primary-foreground">$123</p>
+            <h3 class="text-lg font-semibold text-primary-foreground">Tier Label</h3>
+            <p class="line-clamp-2 text-ellipsis text-foreground-inverted">Tier/Plan short description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="h-11 text-accent-foreground block w-full rounded-full bg-accent font-semibold">Get started</button>
+            <ul class="space-y-3">
+              <li class="flex gap-2 items-start">
+                <img src="/img_check-inverted.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis text-foreground-inverted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check-inverted.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis text-foreground-inverted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check-inverted.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis text-foreground-inverted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check-inverted.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis text-foreground-inverted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check-inverted.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis text-foreground-inverted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check-inverted.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis text-foreground-inverted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+            </ul>
+          </div>
+          <!-- package 3 -->
+          <div class="space-y-3 flex-1 w-1/3 p-7 rounded-2xl text-sm leading-6">
+            <p class="text-4xl font-semibold">$123</p>
+            <h3 class="text-lg font-semibold">Tier Label</h3>
+            <p class="line-clamp-2 text-ellipsis">Tier/Plan short description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="h-11 block w-full rounded-full font-semibold outline outline-1 outline-gray-400">Get started</button>
+            <ul class="space-y-3">
+              <li class="flex gap-2 items-start">
+                <img src="/img_check.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="flex gap-2 items-start">
+                <img src="/img_check.svg" width="22" height="22" class="mt-1" />
+                <p class="line-clamp-2 text-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </Container>
     </main>
 
     <footer></footer>

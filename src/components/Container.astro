@@ -1,0 +1,11 @@
+---
+import { cn } from "@/lib/utils"
+
+const { className } = Astro.props
+---
+
+<section class={cn("py-20", className)}>
+	<div class="container max-w-[1100px]">
+		<slot />
+	</div>
+</section>
