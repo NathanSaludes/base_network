@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         sans: ['Manrope', ...fontFamily.sans],
       },
+      content: {
+        'menu-icon': 'url("/img_menu.png")'
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

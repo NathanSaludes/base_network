@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 
 const RoundedButton = ({ children }) => (
   <Button
-    className="rounded-full font-semibold text-primary-foreground"
+    className="rounded-full font-semibold text-primary-foreground hover:opacity-95 transition duration-150 hover:scale-105"
     size="lg"
   >
     {children}
